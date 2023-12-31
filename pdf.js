@@ -4,8 +4,7 @@ const puppeteer = require('puppeteer');
 
 (async () => {
 
-  // headless by default
-  // const browser = await puppeteer.launch({ headless: false });
+  // headless by default ---- { headless: new } for the new Headless mode
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
   await page.goto('https://news.ycombinator.com', {
